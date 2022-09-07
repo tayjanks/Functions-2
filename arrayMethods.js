@@ -18,7 +18,7 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 // CODE HERE
-const evenNumbers = mixedNumbers.filter(function(elm){return elemtn % 2 === 0})
+const evenNumbers = mixedNumbers.filter(function(elem){return elem % 2 === 0});
 
 
 
@@ -39,7 +39,7 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 */
 
 // CODE HERE
-const postTaxPrices // = prices.map(/* Provide Your Callback Here );
+const postTaxPrices = prices.map(function (num) { return num*=1.07});
 
 
 
