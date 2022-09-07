@@ -82,7 +82,8 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 // CODE HERE
-//const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+const myStrongest = monstersInYourPocket.filter(function(elem){return elem.CP>200});
+console.log(myStrongest);
 
 
 
@@ -101,7 +102,8 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 
 // CODE HERE
 
-
+const withTax = orders.map(function(elem){return elem.price + (elem.price * elem.tax)});
+console.log(withTax);
 
 ////////// PROBLEM 6 //////////
 
