@@ -21,7 +21,6 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 const evenNumbers = mixedNumbers.filter(function(elem){return elem % 2 === 0});
 
 
-
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -43,6 +42,7 @@ const postTaxPrices = prices.map(function (num) { return num*=1.07});
 
 
 
+
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
@@ -57,7 +57,7 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 // CODE HERE
-const totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+const totalPopulation = populations.reduce(function(acc,curr){return acc+curr});
 
 
 
@@ -82,7 +82,7 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 // CODE HERE
-const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+//const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
 
 
 
