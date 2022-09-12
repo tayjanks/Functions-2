@@ -218,7 +218,7 @@ console.log('The user with the id 16t has the email of ' + user.email + ' the na
 
 // CODE HERE
 
-const addingFactory = (num) => {return function(num2) =>{return num+num2}};
+const addingFactory = (num) => {return function(num2) {return num+num2}};
 
 /*
   Now that you have addingFactory, you can create other
@@ -234,6 +234,8 @@ const addingFactory = (num) => {return function(num2) =>{return num+num2}};
 
 // CODE HERE
 
+let addTen = addingFactory(10);
+
 /*
   Now the inner function is stored in the addTen variable! 
 
@@ -243,6 +245,9 @@ const addingFactory = (num) => {return function(num2) =>{return num+num2}};
   Call it a second time, passing in a different number
   to see the different outputs.
 */
+
+console.log(addTen(15));
+console.log(addTen(100));
 
 // CODE HERE
 
@@ -258,3 +263,6 @@ const addingFactory = (num) => {return function(num2) =>{return num+num2}};
 */
 
 // CODE HERE
+
+addSeven = addingFactory(7);
+console.log(addSeven(10));
