@@ -139,7 +139,7 @@ uniq(names, uniqueArr => console.log(`The new names array with all the duplicate
 */
 
 // CODE HERE 
-
+const each = (arr, callback) => arr.forEach((name, i) => callback(name, i));
 
 /*
   Invoke the each function, passing in the names array and a callback function.
@@ -150,6 +150,7 @@ uniq(names, uniqueArr => console.log(`The new names array with all the duplicate
 
 // CODE HERE
 
+each(names, (item, index) => console.log((`The item at ${index} is ${item} `)));
 
 ////////// PROBLEM 7 //////////
 
@@ -157,6 +158,8 @@ uniq(names, uniqueArr => console.log(`The new names array with all the duplicate
   Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
   When the correct user object is found, invoke the callback with the user object as an argument.
 */
+
+
 
 // Do not edit the code below.
 var users = [
@@ -183,14 +186,19 @@ var users = [
 
 // CODE HERE 
 
+const getUserById = (arr, id, callback) => {
+for (let i=0; i<arr.length; i++){
+  if (arr[i].id===id){return callback(arr[i])}
+}
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// })
+getUserById(users, '16t', user => {
+console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+})
 
 ////////// CHALLENGE //////////
 
