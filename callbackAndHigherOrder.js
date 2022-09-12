@@ -218,6 +218,8 @@ console.log('The user with the id 16t has the email of ' + user.email + ' the na
 
 // CODE HERE
 
+const addingFactory = (num) => {return function(num2) =>{return num+num2}};
+
 /*
   Now that you have addingFactory, you can create other
   functions from it. 
