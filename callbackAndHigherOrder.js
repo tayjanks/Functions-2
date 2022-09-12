@@ -81,18 +81,22 @@ console.log('The last name in names is ' + lastName)
 
 // CODE HERE 
 
+const contains = (arr, name, callback) => {
+  if (arr.includes(name)=== true){callback(true)}
+  else {callback(false)}
+};
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// contains(names, 'Colt', result => {
-//   if(result === true){
-//     console.log('Colt is in the array')
-//   } else {
-//     console.log('Colt is not in the array')
-//   }
-// })
+contains(names, 'Colt', result => {
+if(result === true){
+ console.log('Colt is in the array')
+} else {
+console.log('Colt is not in the array')
+}
+})
 
 
 
@@ -106,6 +110,16 @@ console.log('The last name in names is ' + lastName)
 
 // CODE HERE
 
+const uniq = (arr, callback) =>{
+  for (let i=0; i<arr.length; i++){
+  for (let j=i+1; j< arr.length; j++){
+    if (arr[i]===arr[j]){arr.splice(j,1)
+      j--
+  }
+}}
+ callback(arr)
+};
+
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
   The callback function should take in one parameter called uniqArr.
@@ -115,7 +129,7 @@ console.log('The last name in names is ' + lastName)
 
 // CODE HERE
 
-
+uniq(names, uniqueArr => console.log(`The new names array with all the duplicate items removed is ${uniqueArr}`))
 
 ////////// PROBLEM 6 //////////
 
